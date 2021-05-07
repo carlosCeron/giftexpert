@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import PropTypes from 'prop-types'
+import CategoryAdd from './components/CategoryAdd';
 
 const GifExpertApp = props => {
 
@@ -14,15 +14,12 @@ const GifExpertApp = props => {
   return (
     <Fragment>
       <h2>GifExpertApp</h2>
+      <CategoryAdd  setCategorias={setCategorias} />
       <hr/>
       {categorias.map(categoria => <li key={categoria}>{categoria}</li>)}
       <button onClick={handleAdd}>Agregar elemento</button>
     </Fragment>
   )
-}
-
-GifExpertApp.propTypes = {
-
 }
 
 export default GifExpertApp
