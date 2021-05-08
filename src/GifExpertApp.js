@@ -1,11 +1,10 @@
 import React, { Fragment, useState } from 'react'
 import CategoryAdd from './components/CategoryAdd';
+import GifGrid from './components/GifGrid';
 
 const GifExpertApp = props => {
 
-  // const categorias = ['One Punch', 'Samurai X', 'Dragon Ball Z'];
-
-  const [categorias, setCategorias] = useState(['One Punch', 'Samurai X', 'Dragon Ball Z']);
+  const [categorias, setCategorias] = useState(['One Punch']);
 
   const handleAdd = () => {
     setCategorias([...categorias, 'Naruto']);
@@ -16,7 +15,7 @@ const GifExpertApp = props => {
       <h2>GifExpertApp</h2>
       <CategoryAdd  setCategorias={setCategorias} />
       <hr/>
-      {categorias.map(categoria => <li key={categoria}>{categoria}</li>)}
+      {categorias.map(categoria => <GifGrid key={categoria} category={categoria} />)}
       <button onClick={handleAdd}>Agregar elemento</button>
     </Fragment>
   )
