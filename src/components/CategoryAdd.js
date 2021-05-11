@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const CategoryAdd = ({ setCategorias }) => {
 
@@ -13,7 +13,7 @@ const CategoryAdd = ({ setCategorias }) => {
     e.preventDefault();
     setCategorias([]);
     if (inputValue.trim().length > 2) {
-      setCategorias(cats => [...cats, inputValue]);
+      setCategorias(cats => [inputValue, ...cats]);
     }
   }
 
