@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en GifGridItem debe demostrar el componente correctamente 1`] = `
+<div
+  className="card card-my-style"
+>
+  <img
+    alt="Test Component"
+    src="http://url.com/"
+  />
+  <p>
+    Test Component
+  </p>
+</div>
+`;
