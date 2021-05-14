@@ -2,9 +2,9 @@ import React, { Fragment, useState } from 'react'
 import CategoryAdd from './components/CategoryAdd';
 import GifGrid from './components/GifGrid';
 
-const GifExpertApp = props => {
+const GifExpertApp = ({categoriesDef = []}) => {
 
-  const [categorias, setCategorias] = useState(['One Punch']);
+  const [categorias, setCategorias] = useState(categoriesDef);
 
   return (
     <Fragment>
